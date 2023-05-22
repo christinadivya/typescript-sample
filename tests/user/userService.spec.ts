@@ -59,8 +59,8 @@ const userService = new UserService(
 const sandbox = sinon.createSandbox();
 
 describe("User Service", () => {
-  const updateUserDataCommonMethod = sandbox
-    .stub(userDao, "updateUserData")
+  const updateCommonMethod = sandbox
+    .stub(userDao, "update")
     .resolves();
   const getUserData = sandbox.stub(userDao, "getUserData").resolves(data);
   const emailExists = sandbox
@@ -152,7 +152,7 @@ describe("User Service", () => {
       expect(result).to.be.a("object");
       should().exist(result.message);
       expect(result.message).to.be.a("string");
-      assert.callOrder(updateUserDataCommonMethod);
+      assert.callOrder(updateCommonMethod);
     });
   });
 });

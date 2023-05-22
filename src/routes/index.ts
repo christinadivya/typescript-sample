@@ -18,11 +18,15 @@ import logger from "../config/logger/Logger";
 import { IRouter } from "../helpers/decorators/handlers.decorator";
 import { MetadataKeys } from "../helpers/decorators/metadata.keys";
 // Helper
+import CustomerDao from "../daos/customer.dao";
+import EmailDao from "../daos/email.dao";
 import JwtHandler from "../helpers/jwtHandler";
 import * as resHndlr from "../helpers/resHandler";
 import PromClient from "../lib/prometheus";
 import JwtAuthenticator from "../middlewares/authentication";
 import { LSRedisClient } from "../redis/redis";
+import CustomerService from "../services/customer.service";
+import customerRoute from "./customer.route";
 // import MailService from "../services/mail.service";
 // Route
 
@@ -84,6 +88,10 @@ export default async function createExpressApp(
   const promClient = new PromClient(expressApp, envConfig.prometheusAppName);
   await promClient.init();
 
+  //dao
+  const emailDao = new EmailDao();
+  const customerDao = new CustomerDao();
+
   // helpers Service
   // const mailService = new MailService();
   const jwtHandler = new JwtHandler(
@@ -92,15 +100,22 @@ export default async function createExpressApp(
     i18nextConfig
   );
 
-  const authenticator = new JwtAuthenticator(jwtHandler);
+  const authenticator = new JwtAuthenticator(jwtHandler, customerDao);
   // init Services
-
+  const customerService = new CustomerService(
+    i18nextConfig,
+    redisClient,
+    jwtHandler,
+    customerDao,
+    emailDao
+  );
   // init Route
-
+  const createCustomerRoute = customerRoute(authenticator, customerService);
   // REMINDER: Make sure to add all service files into this services array.
   function registerRouters() {
-    // const services = [{ instance: userService, className: UserService }];
-    const services = [];
+    const services = [
+      { instance: customerService, className: CustomerService },
+    ];
     const info: Array<{ api: string; handler: string }> = [];
 
     services.forEach((service) => {
@@ -139,8 +154,7 @@ export default async function createExpressApp(
   registerRouters();
 
   // router definition
-  // apiRouter.use("/providers", createProviderRoute);
-  // apiRouter.use("/users", createUserRoute);
+  apiRouter.use("/customers", createCustomerRoute);
 
   expressApp.use(
     "/api",

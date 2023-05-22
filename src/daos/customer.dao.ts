@@ -9,7 +9,7 @@ import { ICustomer, ICustomerData } from "../interfaces/entity/ICustomer";
  */
 export default class CustomerDao implements ICustomerDao {
   add(customerData: ICustomerData): Promise<ICustomerData> {
-    return appDataSource.getRepository<ICustomer>(Customer).save(customerData);
+    return appDataSource.getRepository<ICustomerData>(Customer).save(customerData);
   }
 
   /**
@@ -25,24 +25,8 @@ export default class CustomerDao implements ICustomerDao {
       return appDataSource
         .getRepository<ICustomerData>(Customer)
         .createQueryBuilder("c")
-        .leftJoin("c.address", "address")
-        .leftJoin("c.phone_number", "phone_number")
         .leftJoin("c.email", "email")
-        .addSelect([
-          "address.id",
-          "address.zip_code",
-          "address.address_line_1",
-          "address.address_line_2",
-          "address.state",
-          "address.city",
-          "address.latitude",
-          "address.longitude",
-          "address.address_type",
-          "email.id",
-          "email.email",
-          "phone_number.id",
-          "phone_number.phone",
-        ])
+        .addSelect(["email.id", "email.email"])
         .where(condition)
         .addSelect("c.password")
         .getOne();
@@ -50,17 +34,8 @@ export default class CustomerDao implements ICustomerDao {
     return appDataSource
       .getRepository<ICustomerData>(Customer)
       .createQueryBuilder("c")
-      .leftJoin("c.address", "address")
-      .leftJoin("c.phone_number", "phone_number")
       .leftJoin("c.email", "email")
-      .addSelect([
-        "address.id",
-        "address.zip_code",
-        "email.id",
-        "email.email",
-        "phone_number.id",
-        "phone_number.phone",
-      ])
+      .addSelect(["email.id", "email.email"])
       .where(condition)
       .getOne();
   }
@@ -69,7 +44,7 @@ export default class CustomerDao implements ICustomerDao {
    * @param searchData - search condition
    * @param updateData - update data
    */
-  public async updateUserData(
+  public async update(
     searchData: ICustomerData,
     updateData: ICustomerData
   ): Promise<void> {

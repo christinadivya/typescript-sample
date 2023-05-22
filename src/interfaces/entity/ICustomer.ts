@@ -4,10 +4,6 @@ export enum CustomerStatusEnum {
   ACTIVE = "ACTIVE",
   INACTIVE = "INACTIVE",
   ARCHIVED = "ARCHIVED",
-  LEAD = "LEAD",
-  ACTIVE_ISSUE = "ACTIVE_ISSUE",
-  ON_HOLD = "ON_HOLD",
-  SUSPENDED = "SUSPENDED",
 }
 
 export interface ICustomer {

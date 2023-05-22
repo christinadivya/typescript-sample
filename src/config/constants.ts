@@ -7,5 +7,5 @@ export const constants = {
   },
   MAIL_TEMPLATE_PATH: "src/view/mail-templates/",
   INVITE_MAIL_SUBJECT: "Hello from typescript",
-  CUSTOMER: 'customer'
+  CUSTOMER: "customer",
 };

@@ -36,11 +36,15 @@ const i18nextConfig_1 = __importDefault(require("../config/i18nextConfig"));
 const Logger_1 = __importDefault(require("../config/logger/Logger"));
 const metadata_keys_1 = require("../helpers/decorators/metadata.keys");
 // Helper
+const customer_dao_1 = __importDefault(require("../daos/customer.dao"));
+const email_dao_1 = __importDefault(require("../daos/email.dao"));
 const jwtHandler_1 = __importDefault(require("../helpers/jwtHandler"));
 const resHndlr = __importStar(require("../helpers/resHandler"));
 const prometheus_1 = __importDefault(require("../lib/prometheus"));
 const authentication_1 = __importDefault(require("../middlewares/authentication"));
 const redis_1 = require("../redis/redis");
+const customer_service_1 = __importDefault(require("../services/customer.service"));
+const customer_route_1 = __importDefault(require("./customer.route"));
 // import MailService from "../services/mail.service";
 // Route
 async function createExpressApp(envConfig) {
@@ -82,16 +86,22 @@ async function createExpressApp(envConfig) {
     // init Prom Client
     const promClient = new prometheus_1.default(expressApp, envConfig.prometheusAppName);
     await promClient.init();
+    //dao
+    const emailDao = new email_dao_1.default();
+    const customerDao = new customer_dao_1.default();
     // helpers Service
     // const mailService = new MailService();
     const jwtHandler = new jwtHandler_1.default(redisClient, envConfig.jwtKey, i18nextConfig_1.default);
-    const authenticator = new authentication_1.default(jwtHandler);
+    const authenticator = new authentication_1.default(jwtHandler, customerDao);
     // init Services
+    const customerService = new customer_service_1.default(i18nextConfig_1.default, redisClient, jwtHandler, customerDao, emailDao);
     // init Route
+    const createCustomerRoute = (0, customer_route_1.default)(authenticator, customerService);
     // REMINDER: Make sure to add all service files into this services array.
     function registerRouters() {
-        // const services = [{ instance: userService, className: UserService }];
-        const services = [];
+        const services = [
+            { instance: customerService, className: customer_service_1.default },
+        ];
         const info = [];
         services.forEach((service) => {
             const serviceInstance = service.instance;
@@ -111,8 +121,7 @@ async function createExpressApp(envConfig) {
     }
     registerRouters();
     // router definition
-    // apiRouter.use("/providers", createProviderRoute);
-    // apiRouter.use("/users", createUserRoute);
+    apiRouter.use("/customers", createCustomerRoute);
     expressApp.use("/api", (req, res, next) => {
         req.headers.app_language = req.language || "en";
         i18nextConfig_1.default.changeLanguage(req.language);

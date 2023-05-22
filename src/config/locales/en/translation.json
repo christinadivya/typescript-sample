@@ -30,5 +30,6 @@
   "INVALID_PHONE": "Invalid phone number",
   "INVALID_ID": "Invalid Id",
   "ACTIVATED_ALREADY": "Account activated already",
-  "INVALID_OTP": "Invalid OTP"
+  "INVALID_OTP": "Invalid OTP",
+  "EDIT_PROFILE": "Profile updated successfully"
 }

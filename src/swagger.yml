@@ -6,30 +6,28 @@ info:
 servers:
   - url: /api
 tags:
-  - name: Provider
-    description: Operations about provider
-  - name: User
-    description: Operations about user
+  - name: Customer
+    description: Operations about customer
 paths:
-  /providers:
+  /customers/sign-up:
     post:
+      summary: To create a new customer via mobile
       tags:
-        - Provider
-      summary: To create a new provider
-      description: Use this method to create a new provider account.
-      operationId: create-provider
+        - Customer
+      description: Signing up by the customer through mobile app.
+      operationId: create-customer-mobile
       parameters:
         - $ref: "#/components/parameters/app_language"
         - $ref: "#/components/parameters/app_version"
       requestBody:
-        description: Create Provider
+        description: Create Customer Request body
         content:
           application/json:
             schema:
-              $ref: "#/components/schemas/CreateProvider"
+              $ref: "#/components/schemas/CreateCustomer"
             examples:
-              create-provider:
-                $ref: "#/components/examples/CreateProvider"
+              create-customer:
+                $ref: "#/components/examples/CreateCustomer"
         required: true
       responses:
         "200":
@@ -38,7 +36,50 @@ paths:
             application/json:
               examples:
                 new provider:
-                  $ref: "#/components/examples/CreateProviderResponse"
+                  $ref: "#/components/examples/CreateCustomerResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+      x-codegen-request-body-name: body
+  /customers:
+    put:
+      summary: To edit a customer
+      tags:
+        - Customer
+      description: Provider can edit the customer.
+      operationId: edit-customer
+      parameters:
+        - $ref: "#/components/parameters/app_language"
+        - $ref: "#/components/parameters/app_version"
+      requestBody:
+        description: Edit Customer Request body
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EditCustomer"
+            examples:
+              edit-customer-provider:
+                $ref: "#/components/examples/EditCustomer"
+              edit-customer-mobile:
+                $ref: "#/components/examples/EditCustomer"
+        required: true
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              examples:
+                new provider:
+                  $ref: "#/components/examples/EditCustomerResponse"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -54,114 +95,23 @@ paths:
       x-codegen-request-body-name: body
       security:
         - Authorization: []
-  /providers/activation:
-    post:
+    get:
+      summary: To get the customer details
       tags:
-        - Provider
-      summary: To activate provider account and set password
-      description: Use this method to activate provider account and set new password.
-      operationId: signup-provider
+        - Customer
+      description: To get the customer details
+      operationId: get-customer-detail
       parameters:
         - $ref: "#/components/parameters/app_language"
         - $ref: "#/components/parameters/app_version"
-      requestBody:
-        description: Signup Provider
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/SignupProvider"
-            examples:
-              signup-provider:
-                $ref: "#/components/examples/SignupProvider"
-        required: true
       responses:
         "200":
           description: successful operation
           content:
             application/json:
               examples:
-                new provider:
-                  $ref: "#/components/examples/SignupProviderResponse"
-        "400":
-          $ref: "#/components/responses/BadRequest"
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-        "422":
-          $ref: "#/components/responses/UnprocessableEntity"
-        default:
-          description: unexpected error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Error"
-  /providers/login:
-    post:
-      tags:
-        - Provider
-      summary: Login as a provider
-      description: Use this method to login into their account.
-      operationId: login-provider
-      parameters:
-        - $ref: "#/components/parameters/app_language"
-        - $ref: "#/components/parameters/app_version"
-      requestBody:
-        description: Login Provider
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/LoginProvider"
-            examples:
-              login-provider:
-                $ref: "#/components/examples/LoginProvider"
-        required: true
-      responses:
-        "200":
-          description: successful operation
-          content:
-            application/json:
-              examples:
-                new provider:
-                  $ref: "#/components/examples/LoginProviderResponse"
-        "400":
-          $ref: "#/components/responses/BadRequest"
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-        "422":
-          $ref: "#/components/responses/UnprocessableEntity"
-        default:
-          description: unexpected error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Error"
-  /users/change-password:
-    post:
-      tags:
-        - User
-      summary: To change user password
-      description: Use this method to change user password.
-      operationId: change-password
-      parameters:
-        - $ref: "#/components/parameters/app_language"
-        - $ref: "#/components/parameters/app_version"
-      requestBody:
-        description: Change Password
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/ChangePassword"
-            examples:
-              change-password:
-                $ref: "#/components/examples/ChangePassword"
-        required: true
-      responses:
-        "200":
-          description: successful operation
-          content:
-            application/json:
-              examples:
-                new provider:
-                  $ref: "#/components/examples/ChangePasswordResponse"
+                Get_Customer_Response:
+                  $ref: "#/components/examples/getCustomerResponse"
         "400":
           $ref: "#/components/responses/BadRequest"
         "401":
@@ -177,126 +127,6 @@ paths:
       x-codegen-request-body-name: body
       security:
         - Authorization: []
-  /users/forgot-password-request:
-    post:
-      tags:
-        - User
-      summary: To send otp to change password by forgot password option
-      description: Use this method to send otp to set new password by forgot password option.
-      operationId: forgot-password-otp
-      parameters:
-        - $ref: "#/components/parameters/app_language"
-        - $ref: "#/components/parameters/app_version"
-      requestBody:
-        description: Forgot Password Request
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/ForgotPasswordRequest"
-            examples:
-              forgot-password-request:
-                $ref: "#/components/examples/ForgotPasswordRequest"
-        required: true
-      responses:
-        "200":
-          description: successful operation
-          content:
-            application/json:
-              examples:
-                new provider:
-                  $ref: "#/components/examples/ForgotPasswordRequestResponse"
-        "400":
-          $ref: "#/components/responses/BadRequest"
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-        "422":
-          $ref: "#/components/responses/UnprocessableEntity"
-        default:
-          description: unexpected error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Error"
-  /users/forgot-password-otp-verification:
-    post:
-      tags:
-        - User
-      summary: To verify otp to update new password using forgot password option
-      description: Use this method to verify otp and then update new password using forgot password option.
-      operationId: forgot-password-otp-verification
-      parameters:
-        - $ref: "#/components/parameters/app_language"
-        - $ref: "#/components/parameters/app_version"
-      requestBody:
-        description: Forgot Password Update
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/ForgotPasswordOTPVerification"
-            examples:
-              forgot-password-otp-verification:
-                $ref: "#/components/examples/ForgotPasswordOTPVerification"
-        required: true
-      responses:
-        "200":
-          description: successful operation
-          content:
-            application/json:
-              examples:
-                new provider:
-                  $ref: "#/components/examples/ForgotPasswordOTPVerificationResponse"
-        "400":
-          $ref: "#/components/responses/BadRequest"
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-        "422":
-          $ref: "#/components/responses/UnprocessableEntity"
-        default:
-          description: unexpected error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Error"
-  /users/forgot-password-update:
-    post:
-      tags:
-        - User
-      summary: To update new password using forgot password option
-      description: Use this method to update new password using forgot password option.
-      operationId: forgot-password-update
-      parameters:
-        - $ref: "#/components/parameters/app_language"
-        - $ref: "#/components/parameters/app_version"
-      requestBody:
-        description: Forgot Password Update
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/ForgotPasswordUpdate"
-            examples:
-              forgot-password-update:
-                $ref: "#/components/examples/ForgotPasswordUpdate"
-        required: true
-      responses:
-        "200":
-          description: successful operation
-          content:
-            application/json:
-              examples:
-                new provider:
-                  $ref: "#/components/examples/ChangePasswordResponse"
-        "400":
-          $ref: "#/components/responses/BadRequest"
-        "401":
-          $ref: "#/components/responses/Unauthorized"
-        "422":
-          $ref: "#/components/responses/UnprocessableEntity"
-        default:
-          description: unexpected error
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/Error"
 components:
   parameters:
     app_language:
@@ -395,175 +225,65 @@ components:
         stack:
           type: string
           description: Error stack will return
-    CreateProvider:
+    CreateCustomer:
       allOf:
         - type: object
           properties:
             first_name:
               type: string
-              description: First name of the provider.Length of this field can be upto 150 characters.
+              description: First name of the customer.Length of this field can be upto 150 characters.
             last_name:
               type: string
-              description: Last name of the provider.Length of this field can be upto 150 characters.
-            business:
+              description: Last name of the customer.Length of this field can be upto 150 characters.
+            password:
+              type: string
+              description: The customer can create their password which should be in encrypted form.
+            email:
               type: object
               properties:
-                business_name:
+                email:
                   type: string
-                  description: The provider organisation name can be declared as business name. Field length is 150.
-            emails:
-              type: array
-              description: It can be multiple values. But any one of the field is set to primary. We can not delete primary email. If we want to delete them, then we can make another one email as primary. Then delete old one.
-              items:
-                $ref: "#/components/schemas/emailArray"
-            phone_numbers:
-              type: array
-              description: It can be multiple values. But any one of the field is set to primary. We can not delete primary phone number. If we want to delete them, then we can make another one phone number as primary. Then delete old one.
-              items:
-                $ref: "#/components/schemas/phoneNumbersArray"
-    emailArray:
-      type: object
-      properties:
-        email:
-          type: string
-          description: It should be valid email address.
-        is_primary:
-          type: number
-          description: The value of this field can be 0 or 1. If we want to set this email as primary then we can give 1. Otherwise it should be 0. Default value of this field is always 0.
-    phoneNumbersArray:
-      type: object
-      properties:
-        phone:
-          type: number
-          description: It should be valid phone number.
-        is_primary:
-          type: number
-          description: The value of this field can be 0 or 1. If we want to set this phone number as primary then we can give 1. Otherwise it should be 0. Default value of this field is always 0.
-    SignupProvider:
+                  description: It should be valid email address.
+    EditCustomer:
       allOf:
         - type: object
           properties:
-            account_id:
-              type: string
-              description: Unique id sent in the invite link.
-            email:
-              type: string
-              description: It should be valid email address and should be encrypted.
-            password:
-              type: string
-              description: User defined password and should be encrypted. Password must satisfy the following criteria...1) Minimum 8 characters - max of 20 2) at least one letter and one number 3) at least one capital and one lowercase 4) at least one special character
-    LoginProvider:
-      allOf:
-        - type: object
-          properties:
-            email:
-              type: string
-              description: It should be valid email address and should be encrypted.
-            password:
-              type: string
-              description: User defined password and should be encrypted. Password must satisfy the following criteria...1) Minimum 8 characters - max of 20 2) at least one letter and one number 3) at least one capital and one lowercase 4) at least one special character
-    ChangePassword:
-      allOf:
-        - type: object
-          properties:
-            old_password:
-              type: string
-              description: User should enter current password and should be encrypted. Password must satisfy the following criteria...1) Minimum 8 characters - max of 20 2) at least one letter and one number 3) at least one capital and one lowercase 4) at least one special character
-            new_password:
-              type: string
-              description: User should enter new password and should be encrypted. Password must satisfy the following criteria...1) Minimum 8 characters - max of 20 2) at least one letter and one number 3) at least one capital and one lowercase 4) at least one special character
-    ForgotPasswordRequest:
-      allOf:
-        - type: object
-          properties:
-            email:
-              type: string
-              description: It should be valid email address and should be encrypted.
-    ForgotPasswordOTPVerification:
-      allOf:
-        - type: object
-          properties:
-            otp_code:
+            id:
               type: number
-              description: OTP send to the requested email when user choose forgot password option and give their email. That will be used to update new password by the user.
-    ForgotPasswordUpdate:
-      allOf:
-        - type: object
-          properties:
-            user_id:
-              type: number
-              description: user id of requesting password update
-            password:
+            first_name:
               type: string
-              description: User defined password and should be encrypted.Password must satisfy the following criteria...1) Minimum 8 characters - max of 20 2) at least one letter and one number 3) at least one capital and one lowercase 4) at least one special character
+              description: First name of the customer.Length of this field can be upto 150 characters.
+            last_name:
+              type: string
+              description: Last name of the customer.Length of this field can be upto 150 characters.
+            email:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: It should be valid email address.
   examples:
-    CreateProvider:
+    CreateCustomer:
       value:
         first_name: Test
         last_name: User
-        display_name: Test user
-        invoice_name: Test
-        business:
-          business_name: test
-        provider_zipcodes:
-          - zipcode_id: 1
-        emails:
-          - email: test1@yopmail.com
-            is_primary: 1
-          - email: test2@yopmail.com
-            is_primary: 0
-        phone_numbers:
-          - phone: "9988776655"
-            is_primary: 1
-          - phone: "9966554433"
-            is_primary: 0
-    CreateProviderResponse:
+        password: U2FsdGVkX19SDg8x1KfPIOIQ7jUyy7415gRbq5qyUl8=
+        email:
+          email: U2FsdGVkX18Xgw8Obtmw2JrnxznJjUe3e8XINPbZKgBMTlAkvYSMpuSeszWbNUt/
+    EditCustomer:
+      value:
+        first_name: Test
+        last_name: User
+        email:
+          email: U2FsdGVkX18Xgw8Obtmw2JrnxznJjUe3e8XINPbZKgBMTlAkvYSMpuSeszWbNUt/
+    CreateCustomerResponse:
       value:
         result:
-          - message: Provider created successfully
-            account_id: 18618751-4020-4919-ba65-b1221e23db05
-            email: christinadivya.p@optisolbusiness.com
-    SignupProvider:
-      value:
-        account_id: 18618751-4020-4919-ba65-b1221e23db05
-        email: test1@yopmail.com
-        password: Test@123
-    SignupProviderResponse:
-      value:
-        message: Successfully registered your password
-    LoginProvider:
-      value:
-        email: test1@yopmail.com
-        password: Test@123
-    LoginProviderResponse:
-      value:
-        result:
-          id: 1
-          account_id: 18618751-4020-4919-ba65-b1221e23db05
-          token: 7cf2795f1cc5ff5316ba08e7f47c4f271ef80b6a
-    ChangePassword:
-      value:
-        old_password: Test@123
-        new_password: Test@1234
-    ChangePasswordResponse:
-      value:
-        message: Password has been changed successfully
-    ForgotPasswordRequest:
-      value:
-        email: test1@yopmail.com
-    ForgotPasswordRequestResponse:
-      value:
-        message: OTP sent successfully
-    ForgotPasswordOTPVerificationResponse:
-      value:
-        message: OTP verified successfully
-    ForgotPasswordOTPVerification:
-      value:
-        otp_code: 1234
-    ForgotPasswordUpdate:
-      value:
-        user_id: 1
-        password: Test@123
+          - message: "Sign up successfully"
+            id: 1
+            account_id: 261a7680-343a-4f4c-af2d-8102b4ad69ad
+            email: test1@yopmail.com
+            token: b6c09c83afbc382aa84a5e754319a781d3dbb49c
   responses:
     NotFound:
       description: The specified resource was not found

@@ -3,6 +3,7 @@ import {
   CreateDateColumn,
   DeleteDateColumn,
   Entity,
+  JoinColumn,
   OneToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
@@ -46,7 +47,8 @@ export default class Customer implements ICustomer {
   deleted_at: Date;
 
   @OneToOne(() => Email, (email: Email) => email.mobile_customer_email, {
-    cascade: true,
+    orphanedRowAction: "delete",
   })
+  @JoinColumn({ name: "id" })
   email: Email;
 }
