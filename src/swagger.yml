@@ -1,0 +1,627 @@
+openapi: 3.0.1
+info:
+  title: typescript-auth
+  description: ""
+  version: 1.0.0
+servers:
+  - url: /api
+tags:
+  - name: Provider
+    description: Operations about provider
+  - name: User
+    description: Operations about user
+paths:
+  /providers:
+    post:
+      tags:
+        - Provider
+      summary: To create a new provider
+      description: Use this method to create a new provider account.
+      operationId: create-provider
+      parameters:
+        - $ref: "#/components/parameters/app_language"
+        - $ref: "#/components/parameters/app_version"
+      requestBody:
+        description: Create Provider
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CreateProvider"
+            examples:
+              create-provider:
+                $ref: "#/components/examples/CreateProvider"
+        required: true
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              examples:
+                new provider:
+                  $ref: "#/components/examples/CreateProviderResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+      x-codegen-request-body-name: body
+      security:
+        - Authorization: []
+  /providers/activation:
+    post:
+      tags:
+        - Provider
+      summary: To activate provider account and set password
+      description: Use this method to activate provider account and set new password.
+      operationId: signup-provider
+      parameters:
+        - $ref: "#/components/parameters/app_language"
+        - $ref: "#/components/parameters/app_version"
+      requestBody:
+        description: Signup Provider
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SignupProvider"
+            examples:
+              signup-provider:
+                $ref: "#/components/examples/SignupProvider"
+        required: true
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              examples:
+                new provider:
+                  $ref: "#/components/examples/SignupProviderResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /providers/login:
+    post:
+      tags:
+        - Provider
+      summary: Login as a provider
+      description: Use this method to login into their account.
+      operationId: login-provider
+      parameters:
+        - $ref: "#/components/parameters/app_language"
+        - $ref: "#/components/parameters/app_version"
+      requestBody:
+        description: Login Provider
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LoginProvider"
+            examples:
+              login-provider:
+                $ref: "#/components/examples/LoginProvider"
+        required: true
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              examples:
+                new provider:
+                  $ref: "#/components/examples/LoginProviderResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /users/change-password:
+    post:
+      tags:
+        - User
+      summary: To change user password
+      description: Use this method to change user password.
+      operationId: change-password
+      parameters:
+        - $ref: "#/components/parameters/app_language"
+        - $ref: "#/components/parameters/app_version"
+      requestBody:
+        description: Change Password
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ChangePassword"
+            examples:
+              change-password:
+                $ref: "#/components/examples/ChangePassword"
+        required: true
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              examples:
+                new provider:
+                  $ref: "#/components/examples/ChangePasswordResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+      x-codegen-request-body-name: body
+      security:
+        - Authorization: []
+  /users/forgot-password-request:
+    post:
+      tags:
+        - User
+      summary: To send otp to change password by forgot password option
+      description: Use this method to send otp to set new password by forgot password option.
+      operationId: forgot-password-otp
+      parameters:
+        - $ref: "#/components/parameters/app_language"
+        - $ref: "#/components/parameters/app_version"
+      requestBody:
+        description: Forgot Password Request
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ForgotPasswordRequest"
+            examples:
+              forgot-password-request:
+                $ref: "#/components/examples/ForgotPasswordRequest"
+        required: true
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              examples:
+                new provider:
+                  $ref: "#/components/examples/ForgotPasswordRequestResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /users/forgot-password-otp-verification:
+    post:
+      tags:
+        - User
+      summary: To verify otp to update new password using forgot password option
+      description: Use this method to verify otp and then update new password using forgot password option.
+      operationId: forgot-password-otp-verification
+      parameters:
+        - $ref: "#/components/parameters/app_language"
+        - $ref: "#/components/parameters/app_version"
+      requestBody:
+        description: Forgot Password Update
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ForgotPasswordOTPVerification"
+            examples:
+              forgot-password-otp-verification:
+                $ref: "#/components/examples/ForgotPasswordOTPVerification"
+        required: true
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              examples:
+                new provider:
+                  $ref: "#/components/examples/ForgotPasswordOTPVerificationResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /users/forgot-password-update:
+    post:
+      tags:
+        - User
+      summary: To update new password using forgot password option
+      description: Use this method to update new password using forgot password option.
+      operationId: forgot-password-update
+      parameters:
+        - $ref: "#/components/parameters/app_language"
+        - $ref: "#/components/parameters/app_version"
+      requestBody:
+        description: Forgot Password Update
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ForgotPasswordUpdate"
+            examples:
+              forgot-password-update:
+                $ref: "#/components/examples/ForgotPasswordUpdate"
+        required: true
+      responses:
+        "200":
+          description: successful operation
+          content:
+            application/json:
+              examples:
+                new provider:
+                  $ref: "#/components/examples/ChangePasswordResponse"
+        "400":
+          $ref: "#/components/responses/BadRequest"
+        "401":
+          $ref: "#/components/responses/Unauthorized"
+        "422":
+          $ref: "#/components/responses/UnprocessableEntity"
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+components:
+  parameters:
+    app_language:
+      in: header
+      name: app-language
+      required: true
+      description: app language
+      schema:
+        type: string
+        example: en
+    app_version:
+      in: header
+      name: app_version
+      required: true
+      description: app version
+      schema:
+        type: number
+        example: "1"
+    sortBy:
+      name: "sortBy"
+      in: "query"
+      description: "Select the sort order (Ex:DESC)"
+      schema:
+        type: "string"
+        enum: [DESC, ASC]
+        example: DESC
+    sortField:
+      name: "sortField"
+      in: "query"
+      description: "enter the sort order (Ex:created_at)"
+      schema:
+        type: "string"
+        example: created_at
+    page:
+      name: page
+      in: "query"
+      description: "Mention the page number (Ex:10)"
+      required: true
+      schema:
+        type: number
+        example: 1
+    limit:
+      name: limit
+      in: "query"
+      description: "Mention the limit should display per page (Ex:10)"
+      required: true
+      schema:
+        type: number
+        example: 10
+  securitySchemes:
+    Authorization:
+      type: apiKey
+      name: Authorization
+      in: header
+  schemas:
+    Error:
+      type: object
+      required:
+        - statusCode
+        - message
+      properties:
+        statusCode:
+          type: number
+        message:
+          type: string
+    ValidationError:
+      required:
+        - message
+      properties:
+        message:
+          type: object
+          required:
+            - name
+            - message
+            - statusCode
+            - error
+            - details
+          properties:
+            name:
+              type: string
+              description: ValidationError
+            message:
+              type: string
+              description: Validation Failed
+            statusCode:
+              type: number
+              description: This will be 422 for this type of error
+            error:
+              type: string
+              description: Bad Request
+            details:
+              type: array
+              items:
+                type: string
+                description: Validation failed fields will return
+        stack:
+          type: string
+          description: Error stack will return
+    CreateProvider:
+      allOf:
+        - type: object
+          properties:
+            first_name:
+              type: string
+              description: First name of the provider.Length of this field can be upto 150 characters.
+            last_name:
+              type: string
+              description: Last name of the provider.Length of this field can be upto 150 characters.
+            business:
+              type: object
+              properties:
+                business_name:
+                  type: string
+                  description: The provider organisation name can be declared as business name. Field length is 150.
+            emails:
+              type: array
+              description: It can be multiple values. But any one of the field is set to primary. We can not delete primary email. If we want to delete them, then we can make another one email as primary. Then delete old one.
+              items:
+                $ref: "#/components/schemas/emailArray"
+            phone_numbers:
+              type: array
+              description: It can be multiple values. But any one of the field is set to primary. We can not delete primary phone number. If we want to delete them, then we can make another one phone number as primary. Then delete old one.
+              items:
+                $ref: "#/components/schemas/phoneNumbersArray"
+    emailArray:
+      type: object
+      properties:
+        email:
+          type: string
+          description: It should be valid email address.
+        is_primary:
+          type: number
+          description: The value of this field can be 0 or 1. If we want to set this email as primary then we can give 1. Otherwise it should be 0. Default value of this field is always 0.
+    phoneNumbersArray:
+      type: object
+      properties:
+        phone:
+          type: number
+          description: It should be valid phone number.
+        is_primary:
+          type: number
+          description: The value of this field can be 0 or 1. If we want to set this phone number as primary then we can give 1. Otherwise it should be 0. Default value of this field is always 0.
+    SignupProvider:
+      allOf:
+        - type: object
+          properties:
+            account_id:
+              type: string
+              description: Unique id sent in the invite link.
+            email:
+              type: string
+              description: It should be valid email address and should be encrypted.
+            password:
+              type: string
+              description: User defined password and should be encrypted. Password must satisfy the following criteria...1) Minimum 8 characters - max of 20 2) at least one letter and one number 3) at least one capital and one lowercase 4) at least one special character
+    LoginProvider:
+      allOf:
+        - type: object
+          properties:
+            email:
+              type: string
+              description: It should be valid email address and should be encrypted.
+            password:
+              type: string
+              description: User defined password and should be encrypted. Password must satisfy the following criteria...1) Minimum 8 characters - max of 20 2) at least one letter and one number 3) at least one capital and one lowercase 4) at least one special character
+    ChangePassword:
+      allOf:
+        - type: object
+          properties:
+            old_password:
+              type: string
+              description: User should enter current password and should be encrypted. Password must satisfy the following criteria...1) Minimum 8 characters - max of 20 2) at least one letter and one number 3) at least one capital and one lowercase 4) at least one special character
+            new_password:
+              type: string
+              description: User should enter new password and should be encrypted. Password must satisfy the following criteria...1) Minimum 8 characters - max of 20 2) at least one letter and one number 3) at least one capital and one lowercase 4) at least one special character
+    ForgotPasswordRequest:
+      allOf:
+        - type: object
+          properties:
+            email:
+              type: string
+              description: It should be valid email address and should be encrypted.
+    ForgotPasswordOTPVerification:
+      allOf:
+        - type: object
+          properties:
+            otp_code:
+              type: number
+              description: OTP send to the requested email when user choose forgot password option and give their email. That will be used to update new password by the user.
+    ForgotPasswordUpdate:
+      allOf:
+        - type: object
+          properties:
+            user_id:
+              type: number
+              description: user id of requesting password update
+            password:
+              type: string
+              description: User defined password and should be encrypted.Password must satisfy the following criteria...1) Minimum 8 characters - max of 20 2) at least one letter and one number 3) at least one capital and one lowercase 4) at least one special character
+  examples:
+    CreateProvider:
+      value:
+        first_name: Test
+        last_name: User
+        display_name: Test user
+        invoice_name: Test
+        business:
+          business_name: test
+        provider_zipcodes:
+          - zipcode_id: 1
+        emails:
+          - email: test1@yopmail.com
+            is_primary: 1
+          - email: test2@yopmail.com
+            is_primary: 0
+        phone_numbers:
+          - phone: "9988776655"
+            is_primary: 1
+          - phone: "9966554433"
+            is_primary: 0
+    CreateProviderResponse:
+      value:
+        result:
+          - message: Provider created successfully
+            account_id: 18618751-4020-4919-ba65-b1221e23db05
+            email: christinadivya.p@optisolbusiness.com
+    SignupProvider:
+      value:
+        account_id: 18618751-4020-4919-ba65-b1221e23db05
+        email: test1@yopmail.com
+        password: Test@123
+    SignupProviderResponse:
+      value:
+        message: Successfully registered your password
+    LoginProvider:
+      value:
+        email: test1@yopmail.com
+        password: Test@123
+    LoginProviderResponse:
+      value:
+        result:
+          id: 1
+          account_id: 18618751-4020-4919-ba65-b1221e23db05
+          token: 7cf2795f1cc5ff5316ba08e7f47c4f271ef80b6a
+    ChangePassword:
+      value:
+        old_password: Test@123
+        new_password: Test@1234
+    ChangePasswordResponse:
+      value:
+        message: Password has been changed successfully
+    ForgotPasswordRequest:
+      value:
+        email: test1@yopmail.com
+    ForgotPasswordRequestResponse:
+      value:
+        message: OTP sent successfully
+    ForgotPasswordOTPVerificationResponse:
+      value:
+        message: OTP verified successfully
+    ForgotPasswordOTPVerification:
+      value:
+        otp_code: 1234
+    ForgotPasswordUpdate:
+      value:
+        user_id: 1
+        password: Test@123
+  responses:
+    NotFound:
+      description: The specified resource was not found
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/Error"
+              - type: object
+                properties:
+                  statusCode:
+                    type: number
+                    example: 404
+    Unauthorized:
+      description: Unauthorized
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/Error"
+              - type: object
+                properties:
+                  statusCode:
+                    type: number
+                    example: 401
+    BadRequest:
+      description: BadRequest
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/Error"
+              - type: object
+                properties:
+                  statusCode:
+                    type: number
+                    example: 400
+    UnprocessableEntity:
+      description: Unprocessable Entity
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/Error"
+              - type: object
+                properties:
+                  statusCode:
+                    type: number
+                    example: 422
+    TooManyRequests:
+      description: Too many Requests
+      content:
+        application/json:
+          schema:
+            allOf:
+              - $ref: "#/components/schemas/Error"
+              - type: object
+                properties:
+                  statusCode:
+                    type: number
+                    example: 429

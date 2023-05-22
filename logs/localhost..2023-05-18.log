@@ -1,0 +1,21 @@
+[2023-05-18T17:03:55.290] [INFO] app - Database connected
+[2023-05-18T17:03:55.328] [INFO] app - Redis db connection established!
+[2023-05-18T17:03:55.406] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-18T17:03:55.406] [INFO] app - Press CTRL-C to stop
+
+[2023-05-18T17:03:56.042] [INFO] app - Database connected
+[2023-05-18T17:03:56.053] [INFO] app - Redis db connection established!
+[2023-05-18T17:03:56.462] [INFO] app - Database connected
+[2023-05-18T17:03:56.467] [INFO] app - Redis db connection established!
+[2023-05-18T17:03:56.501] [INFO] app - Database connected
+[2023-05-18T17:03:56.533] [INFO] app - Redis db connection established!
+[2023-05-18T17:03:56.774] [INFO] app - Database connected
+[2023-05-18T17:03:56.779] [INFO] app - Redis db connection established!
+[2023-05-18T17:03:57.681] [INFO] app - Database connected
+[2023-05-18T17:03:57.686] [INFO] app - Redis db connection established!
+[2023-05-18T17:03:57.926] [INFO] app - Database connected
+[2023-05-18T17:03:57.935] [INFO] app - Redis db connection established!
+[2023-05-18T17:03:58.092] [INFO] app - Database connected
+[2023-05-18T17:03:58.108] [INFO] app - Database connected
+[2023-05-18T17:03:58.101] [INFO] app - Redis db connection established!
+[2023-05-18T17:03:58.116] [INFO] app - Redis db connection established!

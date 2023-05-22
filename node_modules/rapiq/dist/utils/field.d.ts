@@ -1,0 +1,3 @@
+import { FieldDetails } from './type';
+export declare function getFieldDetails(field: string): FieldDetails;
+//# sourceMappingURL=field.d.ts.map

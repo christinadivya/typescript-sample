@@ -1,0 +1,586 @@
+[2023-05-22T07:40:36.005] [ERROR] app - Error: Connection lost: The server closed the connection.
+    at Socket.<anonymous> (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/connection.js:101:31)
+    at Socket.emit (events.js:314:20)
+    at Socket.EventEmitter.emit (domain.js:486:12)
+    at TCP.<anonymous> (net.js:672:12) {
+  fatal: true,
+  code: 'PROTOCOL_CONNECTION_LOST'
+} Unable to start the server!
+[2023-05-22T07:41:06.801] [ERROR] app - Error: Connection lost: The server closed the connection.
+    at Socket.<anonymous> (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/connection.js:101:31)
+    at Socket.emit (events.js:314:20)
+    at Socket.EventEmitter.emit (domain.js:486:12)
+    at TCP.<anonymous> (net.js:672:12) {
+  fatal: true,
+  code: 'PROTOCOL_CONNECTION_LOST'
+} Unable to start the server!
+[2023-05-22T07:41:11.316] [ERROR] app - Error: Connection lost: The server closed the connection.
+    at Socket.<anonymous> (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/connection.js:101:31)
+    at Socket.emit (events.js:314:20)
+    at Socket.EventEmitter.emit (domain.js:486:12)
+    at TCP.<anonymous> (net.js:672:12) {
+  fatal: true,
+  code: 'PROTOCOL_CONNECTION_LOST'
+} Unable to start the server!
+[2023-05-22T07:42:33.719] [ERROR] app - Error: Connection lost: The server closed the connection.
+    at Socket.<anonymous> (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/connection.js:101:31)
+    at Socket.emit (events.js:314:20)
+    at Socket.EventEmitter.emit (domain.js:486:12)
+    at TCP.<anonymous> (net.js:672:12) {
+  fatal: true,
+  code: 'PROTOCOL_CONNECTION_LOST'
+} Unable to start the server!
+[2023-05-22T07:49:02.350] [ERROR] app - Error: Connection lost: The server closed the connection.
+    at Socket.<anonymous> (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/connection.js:101:31)
+    at Socket.emit (events.js:314:20)
+    at Socket.EventEmitter.emit (domain.js:486:12)
+    at TCP.<anonymous> (net.js:672:12) {
+  fatal: true,
+  code: 'PROTOCOL_CONNECTION_LOST'
+} Unable to start the server!
+[2023-05-22T07:50:34.501] [ERROR] app - Error: Connection lost: The server closed the connection.
+    at Socket.<anonymous> (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/connection.js:101:31)
+    at Socket.emit (events.js:314:20)
+    at Socket.EventEmitter.emit (domain.js:486:12)
+    at TCP.<anonymous> (net.js:672:12) {
+  fatal: true,
+  code: 'PROTOCOL_CONNECTION_LOST'
+} Unable to start the server!
+[2023-05-22T07:51:26.723] [ERROR] app - Error: Connection lost: The server closed the connection.
+    at Socket.<anonymous> (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/connection.js:101:31)
+    at Socket.emit (events.js:314:20)
+    at Socket.EventEmitter.emit (domain.js:486:12)
+    at TCP.<anonymous> (net.js:672:12) {
+  fatal: true,
+  code: 'PROTOCOL_CONNECTION_LOST'
+} Unable to start the server!
+[2023-05-22T07:53:41.146] [ERROR] app - Error: Connection lost: The server closed the connection.
+    at Socket.<anonymous> (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/connection.js:101:31)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    at TCP.<anonymous> (node:net:757:14) {
+  fatal: true,
+  code: 'PROTOCOL_CONNECTION_LOST'
+} Unable to start the server!
+[2023-05-22T07:54:12.997] [ERROR] app - Error: Connection lost: The server closed the connection.
+    at Socket.<anonymous> (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/connection.js:101:31)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    at TCP.<anonymous> (node:net:757:14) {
+  fatal: true,
+  code: 'PROTOCOL_CONNECTION_LOST'
+} Unable to start the server!
+[2023-05-22T07:56:07.226] [ERROR] app - Error: Access denied for user 'user'@'%' to database 'sample'
+    at Packet.asError (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/packets/packet.js:728:17)
+    at ClientHandshake.execute (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/commands/command.js:29:26)
+    at PoolConnection.handlePacket (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/connection.js:456:32)
+    at PacketParser.onPacket (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/connection.js:85:12)
+    at PacketParser.executeStart (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/connection.js:92:25)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at Socket.Readable.push (node:internal/streams/readable:228:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+  code: 'ER_DBACCESS_DENIED_ERROR',
+  errno: 1044,
+  sqlState: '42000',
+  sqlMessage: "Access denied for user 'user'@'%' to database 'sample'",
+  sql: undefined
+} Unable to start the server!
+[2023-05-22T08:05:09.914] [ERROR] app - Error: Access denied for user 'root'@'172.20.0.1' (using password: YES)
+    at Packet.asError (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/packets/packet.js:728:17)
+    at ClientHandshake.execute (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/commands/command.js:29:26)
+    at PoolConnection.handlePacket (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/connection.js:456:32)
+    at PacketParser.onPacket (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/connection.js:85:12)
+    at PacketParser.executeStart (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/connection.js:92:25)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at Socket.Readable.push (node:internal/streams/readable:228:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'root'@'172.20.0.1' (using password: YES)",
+  sql: undefined
+} Unable to start the server!
+[2023-05-22T08:12:34.548] [ERROR] app - Error: Access denied for user 'root'@'172.20.0.1' (using password: YES)
+    at Packet.asError (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/packets/packet.js:728:17)
+    at ClientHandshake.execute (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/commands/command.js:29:26)
+    at PoolConnection.handlePacket (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/connection.js:456:32)
+    at PacketParser.onPacket (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/connection.js:85:12)
+    at PacketParser.executeStart (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/connection.js:92:25)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at Socket.Readable.push (node:internal/streams/readable:228:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'root'@'172.20.0.1' (using password: YES)",
+  sql: undefined
+} Unable to start the server!
+[2023-05-22T08:22:42.658] [ERROR] app - Error: connect ECONNREFUSED 127.0.0.1:3307
+    at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1247:16) {
+  errno: -111,
+  code: 'ECONNREFUSED',
+  syscall: 'connect',
+  address: '127.0.0.1',
+  port: 3307,
+  fatal: true
+} Unable to start the server!
+[2023-05-22T08:26:17.529] [ERROR] app - Error: Access denied for user 'user'@'localhost' (using password: YES)
+    at Packet.asError (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/packets/packet.js:728:17)
+    at ClientHandshake.execute (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/commands/command.js:29:26)
+    at PoolConnection.handlePacket (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/connection.js:456:32)
+    at PacketParser.onPacket (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/connection.js:85:12)
+    at PacketParser.executeStart (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/packet_parser.js:75:16)
+    at Socket.<anonymous> (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/mysql2/lib/connection.js:92:25)
+    at Socket.emit (node:events:513:28)
+    at Socket.emit (node:domain:489:12)
+    at addChunk (node:internal/streams/readable:315:12)
+    at readableAddChunk (node:internal/streams/readable:289:9)
+    at Socket.Readable.push (node:internal/streams/readable:228:10)
+    at TCP.onStreamRead (node:internal/stream_base_commons:190:23) {
+  code: 'ER_ACCESS_DENIED_ERROR',
+  errno: 1045,
+  sqlState: '28000',
+  sqlMessage: "Access denied for user 'user'@'localhost' (using password: YES)",
+  sql: undefined
+} Unable to start the server!
+[2023-05-22T08:33:38.567] [INFO] app - Database connected
+[2023-05-22T08:33:38.581] [INFO] app - Redis db connection established!
+[2023-05-22T08:33:38.600] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T08:33:38.601] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T08:37:04.565] [INFO] app - Database connected
+[2023-05-22T08:37:04.569] [INFO] app - Redis db connection established!
+[2023-05-22T08:37:04.582] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T08:37:04.582] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T09:24:08.602] [INFO] app - Database connected
+[2023-05-22T09:24:08.607] [INFO] app - Redis db connection established!
+[2023-05-22T09:24:08.621] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T09:24:08.621] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T09:25:08.682] [INFO] app - Database connected
+[2023-05-22T09:25:08.687] [INFO] app - Redis db connection established!
+[2023-05-22T09:25:08.698] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T09:25:08.698] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T09:26:35.299] [ERROR] app - SyntaxError: /home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/src/database/migration/1684727707197-AddEmailTable.ts: Unexpected token, expected "," (25:18)
+
+[0m [90m 23 |[39m                     type[33m:[39m [32m'varchar(150)'[39m[33m,[39m[0m
+[0m [90m 24 |[39m                   }[0m
+[0m[31m[1m>[22m[39m[90m 25 |[39m                   {[0m
+[0m [90m    |[39m                   [31m[1m^[22m[39m[0m
+[0m [90m 26 |[39m                     name[33m:[39m [32m'is_verified'[39m[33m,[39m[0m
+[0m [90m 27 |[39m                     type[33m:[39m [32m'boolean'[39m[33m,[39m[0m
+[0m [90m 28 |[39m                     [36mdefault[39m[33m:[39m [36mfalse[39m[33m,[39m[0m
+    at instantiate (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:653:32)
+    at constructor (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:946:12)
+    at TypeScriptParserMixin.raise (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:3270:19)
+    at TypeScriptParserMixin.unexpected (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:3300:16)
+    at TypeScriptParserMixin.expect (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:3642:28)
+    at TypeScriptParserMixin.parseExprList (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11972:14)
+    at TypeScriptParserMixin.parseArrayLike (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11881:26)
+    at TypeScriptParserMixin.parseArrayLike (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:9164:24)
+    at TypeScriptParserMixin.parseExprAtom (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11150:23)
+    at TypeScriptParserMixin.parseExprSubscripts (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10872:23)
+    at TypeScriptParserMixin.parseUpdate (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10855:21)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10831:23)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:9754:18)
+    at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10669:61)
+    at TypeScriptParserMixin.parseExprOps (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10674:23)
+    at TypeScriptParserMixin.parseMaybeConditional (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10651:23)
+    at TypeScriptParserMixin.parseMaybeAssign (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10612:21)
+    at TypeScriptParserMixin.parseMaybeAssign (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:9701:20)
+    at /home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10582:39
+    at TypeScriptParserMixin.allowInAnd (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:12257:12)
+    at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10582:17)
+    at TypeScriptParserMixin.parseObjectProperty (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11773:83)
+    at TypeScriptParserMixin.parseObjPropValue (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11800:100)
+    at TypeScriptParserMixin.parseObjPropValue (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:9659:18)
+    at TypeScriptParserMixin.parsePropertyDefinition (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11734:17)
+    at TypeScriptParserMixin.parseObjectLike (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11649:21)
+    at TypeScriptParserMixin.parseExprAtom (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11159:23)
+    at TypeScriptParserMixin.parseExprSubscripts (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10872:23)
+    at TypeScriptParserMixin.parseUpdate (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10855:21)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10831:23)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:9754:18)
+    at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10669:61)
+    at TypeScriptParserMixin.parseExprOps (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10674:23)
+    at TypeScriptParserMixin.parseMaybeConditional (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10651:23)
+    at TypeScriptParserMixin.parseMaybeAssign (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10612:21)
+    at TypeScriptParserMixin.parseMaybeAssign (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:9701:20)
+    at /home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10582:39
+    at TypeScriptParserMixin.allowInAnd (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:12257:12)
+    at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10582:17)
+    at TypeScriptParserMixin.parseExprListItem (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:12009:18)
+    at TypeScriptParserMixin.parseExprList (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11981:22)
+    at TypeScriptParserMixin.parseNew (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11564:25)
+    at TypeScriptParserMixin.parseNewOrNewTarget (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11559:17)
+    at TypeScriptParserMixin.parseExprAtom (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11168:21)
+    at TypeScriptParserMixin.parseExprSubscripts (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10872:23)
+    at TypeScriptParserMixin.parseUpdate (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10855:21)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10831:23)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:9754:18)
+    at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10669:61)
+    at TypeScriptParserMixin.parseExprOps (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10674:23) {
+  code: 'BABEL_PARSE_ERROR',
+  reasonCode: 'UnexpectedToken',
+  loc: Position { line: 25, column: 18, index: 832 },
+  pos: [Getter/Setter]
+} Unable to start the server!
+[2023-05-22T09:28:19.486] [ERROR] app - SyntaxError: /home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/src/database/migration/1684727707197-AddEmailTable.ts: Unexpected token, expected "," (25:18)
+
+[0m [90m 23 |[39m                     type[33m:[39m [32m'varchar(150)'[39m[33m,[39m[0m
+[0m [90m 24 |[39m                   }[0m
+[0m[31m[1m>[22m[39m[90m 25 |[39m                   {[0m
+[0m [90m    |[39m                   [31m[1m^[22m[39m[0m
+[0m [90m 26 |[39m                     name[33m:[39m [32m'is_verified'[39m[33m,[39m[0m
+[0m [90m 27 |[39m                     type[33m:[39m [32m'boolean'[39m[33m,[39m[0m
+[0m [90m 28 |[39m                     [36mdefault[39m[33m:[39m [36mfalse[39m[33m,[39m[0m
+    at instantiate (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:653:32)
+    at constructor (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:946:12)
+    at TypeScriptParserMixin.raise (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:3270:19)
+    at TypeScriptParserMixin.unexpected (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:3300:16)
+    at TypeScriptParserMixin.expect (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:3642:28)
+    at TypeScriptParserMixin.parseExprList (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11972:14)
+    at TypeScriptParserMixin.parseArrayLike (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11881:26)
+    at TypeScriptParserMixin.parseArrayLike (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:9164:24)
+    at TypeScriptParserMixin.parseExprAtom (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11150:23)
+    at TypeScriptParserMixin.parseExprSubscripts (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10872:23)
+    at TypeScriptParserMixin.parseUpdate (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10855:21)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10831:23)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:9754:18)
+    at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10669:61)
+    at TypeScriptParserMixin.parseExprOps (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10674:23)
+    at TypeScriptParserMixin.parseMaybeConditional (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10651:23)
+    at TypeScriptParserMixin.parseMaybeAssign (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10612:21)
+    at TypeScriptParserMixin.parseMaybeAssign (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:9701:20)
+    at /home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10582:39
+    at TypeScriptParserMixin.allowInAnd (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:12257:12)
+    at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10582:17)
+    at TypeScriptParserMixin.parseObjectProperty (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11773:83)
+    at TypeScriptParserMixin.parseObjPropValue (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11800:100)
+    at TypeScriptParserMixin.parseObjPropValue (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:9659:18)
+    at TypeScriptParserMixin.parsePropertyDefinition (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11734:17)
+    at TypeScriptParserMixin.parseObjectLike (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11649:21)
+    at TypeScriptParserMixin.parseExprAtom (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11159:23)
+    at TypeScriptParserMixin.parseExprSubscripts (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10872:23)
+    at TypeScriptParserMixin.parseUpdate (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10855:21)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10831:23)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:9754:18)
+    at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10669:61)
+    at TypeScriptParserMixin.parseExprOps (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10674:23)
+    at TypeScriptParserMixin.parseMaybeConditional (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10651:23)
+    at TypeScriptParserMixin.parseMaybeAssign (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10612:21)
+    at TypeScriptParserMixin.parseMaybeAssign (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:9701:20)
+    at /home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10582:39
+    at TypeScriptParserMixin.allowInAnd (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:12257:12)
+    at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10582:17)
+    at TypeScriptParserMixin.parseExprListItem (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:12009:18)
+    at TypeScriptParserMixin.parseExprList (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11981:22)
+    at TypeScriptParserMixin.parseNew (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11564:25)
+    at TypeScriptParserMixin.parseNewOrNewTarget (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11559:17)
+    at TypeScriptParserMixin.parseExprAtom (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11168:21)
+    at TypeScriptParserMixin.parseExprSubscripts (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10872:23)
+    at TypeScriptParserMixin.parseUpdate (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10855:21)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10831:23)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:9754:18)
+    at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10669:61)
+    at TypeScriptParserMixin.parseExprOps (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10674:23) {
+  code: 'BABEL_PARSE_ERROR',
+  reasonCode: 'UnexpectedToken',
+  loc: Position { line: 25, column: 18, index: 844 },
+  pos: [Getter/Setter]
+} Unable to start the server!
+[2023-05-22T09:30:09.008] [ERROR] app - SyntaxError: /home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/src/database/migration/1684727707197-AddEmailTable.ts: Unexpected token, expected "," (25:18)
+
+[0m [90m 23 |[39m                     type[33m:[39m [32m'varchar(150)'[39m[33m,[39m[0m
+[0m [90m 24 |[39m                   }[0m
+[0m[31m[1m>[22m[39m[90m 25 |[39m                   {[0m
+[0m [90m    |[39m                   [31m[1m^[22m[39m[0m
+[0m [90m 26 |[39m                     name[33m:[39m [32m'is_verified'[39m[33m,[39m[0m
+[0m [90m 27 |[39m                     type[33m:[39m [32m'boolean'[39m[33m,[39m[0m
+[0m [90m 28 |[39m                     [36mdefault[39m[33m:[39m [36mfalse[39m[33m,[39m[0m
+    at instantiate (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:653:32)
+    at constructor (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:946:12)
+    at TypeScriptParserMixin.raise (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:3270:19)
+    at TypeScriptParserMixin.unexpected (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:3300:16)
+    at TypeScriptParserMixin.expect (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:3642:28)
+    at TypeScriptParserMixin.parseExprList (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11972:14)
+    at TypeScriptParserMixin.parseArrayLike (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11881:26)
+    at TypeScriptParserMixin.parseArrayLike (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:9164:24)
+    at TypeScriptParserMixin.parseExprAtom (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11150:23)
+    at TypeScriptParserMixin.parseExprSubscripts (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10872:23)
+    at TypeScriptParserMixin.parseUpdate (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10855:21)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10831:23)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:9754:18)
+    at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10669:61)
+    at TypeScriptParserMixin.parseExprOps (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10674:23)
+    at TypeScriptParserMixin.parseMaybeConditional (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10651:23)
+    at TypeScriptParserMixin.parseMaybeAssign (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10612:21)
+    at TypeScriptParserMixin.parseMaybeAssign (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:9701:20)
+    at /home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10582:39
+    at TypeScriptParserMixin.allowInAnd (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:12257:12)
+    at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10582:17)
+    at TypeScriptParserMixin.parseObjectProperty (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11773:83)
+    at TypeScriptParserMixin.parseObjPropValue (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11800:100)
+    at TypeScriptParserMixin.parseObjPropValue (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:9659:18)
+    at TypeScriptParserMixin.parsePropertyDefinition (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11734:17)
+    at TypeScriptParserMixin.parseObjectLike (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11649:21)
+    at TypeScriptParserMixin.parseExprAtom (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11159:23)
+    at TypeScriptParserMixin.parseExprSubscripts (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10872:23)
+    at TypeScriptParserMixin.parseUpdate (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10855:21)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10831:23)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:9754:18)
+    at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10669:61)
+    at TypeScriptParserMixin.parseExprOps (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10674:23)
+    at TypeScriptParserMixin.parseMaybeConditional (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10651:23)
+    at TypeScriptParserMixin.parseMaybeAssign (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10612:21)
+    at TypeScriptParserMixin.parseMaybeAssign (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:9701:20)
+    at /home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10582:39
+    at TypeScriptParserMixin.allowInAnd (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:12257:12)
+    at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10582:17)
+    at TypeScriptParserMixin.parseExprListItem (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:12009:18)
+    at TypeScriptParserMixin.parseExprList (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11981:22)
+    at TypeScriptParserMixin.parseNew (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11564:25)
+    at TypeScriptParserMixin.parseNewOrNewTarget (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11559:17)
+    at TypeScriptParserMixin.parseExprAtom (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:11168:21)
+    at TypeScriptParserMixin.parseExprSubscripts (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10872:23)
+    at TypeScriptParserMixin.parseUpdate (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10855:21)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10831:23)
+    at TypeScriptParserMixin.parseMaybeUnary (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:9754:18)
+    at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10669:61)
+    at TypeScriptParserMixin.parseExprOps (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/@babel/parser/lib/index.js:10674:23) {
+  code: 'BABEL_PARSE_ERROR',
+  reasonCode: 'UnexpectedToken',
+  loc: Position { line: 25, column: 18, index: 844 },
+  pos: [Getter/Setter]
+} Unable to start the server!
+[2023-05-22T09:30:28.567] [INFO] app - Database connected
+[2023-05-22T09:30:28.572] [INFO] app - Redis db connection established!
+[2023-05-22T09:30:28.588] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T09:30:28.588] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T09:33:22.135] [INFO] app - Database connected
+[2023-05-22T09:33:22.141] [INFO] app - Redis db connection established!
+[2023-05-22T09:33:22.152] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T09:33:22.153] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T09:33:29.863] [INFO] app - Database connected
+[2023-05-22T09:33:29.871] [INFO] app - Redis db connection established!
+[2023-05-22T09:33:29.882] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T09:33:29.883] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T09:44:28.810] [ERROR] app - TypeORMError: Entity metadata for Email#mobile_customer_email was not found. Check if you specified a correct entity object and if it's connected in the connection options.
+    at /home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:705:23
+    at Array.forEach (<anonymous>)
+    at EntityMetadataBuilder.computeInverseProperties (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:698:34)
+    at /home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:84:58
+    at Array.forEach (<anonymous>)
+    at EntityMetadataBuilder.build (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:84:25)
+    at ConnectionMetadataBuilder.buildEntityMetadatas (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/connection/ConnectionMetadataBuilder.js:66:150)
+    at async DataSource.buildMetadatas (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/data-source/DataSource.js:439:33)
+    at async DataSource.initialize (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/data-source/DataSource.js:130:13)
+    at async runServer (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/src/index.ts:12:5) Unable to start the server!
+[2023-05-22T09:47:16.264] [ERROR] app - TypeORMError: Entity metadata for Email#mobile_customer_email was not found. Check if you specified a correct entity object and if it's connected in the connection options.
+    at /home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:705:23
+    at Array.forEach (<anonymous>)
+    at EntityMetadataBuilder.computeInverseProperties (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:698:34)
+    at /home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:84:58
+    at Array.forEach (<anonymous>)
+    at EntityMetadataBuilder.build (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:84:25)
+    at ConnectionMetadataBuilder.buildEntityMetadatas (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/connection/ConnectionMetadataBuilder.js:66:150)
+    at async DataSource.buildMetadatas (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/data-source/DataSource.js:439:33)
+    at async DataSource.initialize (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/data-source/DataSource.js:130:13)
+    at async runServer (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/src/index.ts:12:5) Unable to start the server!
+[2023-05-22T09:47:37.081] [ERROR] app - TypeORMError: Entity metadata for Email#mobile_customer_email was not found. Check if you specified a correct entity object and if it's connected in the connection options.
+    at /home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:705:23
+    at Array.forEach (<anonymous>)
+    at EntityMetadataBuilder.computeInverseProperties (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:698:34)
+    at /home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:84:58
+    at Array.forEach (<anonymous>)
+    at EntityMetadataBuilder.build (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:84:25)
+    at ConnectionMetadataBuilder.buildEntityMetadatas (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/connection/ConnectionMetadataBuilder.js:66:150)
+    at async DataSource.buildMetadatas (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/data-source/DataSource.js:439:33)
+    at async DataSource.initialize (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/data-source/DataSource.js:130:13)
+    at async runServer (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/src/index.ts:12:5) Unable to start the server!
+[2023-05-22T09:59:34.158] [ERROR] app - TypeORMError: Entity metadata for Email#mobile_customer_email was not found. Check if you specified a correct entity object and if it's connected in the connection options.
+    at /home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:705:23
+    at Array.forEach (<anonymous>)
+    at EntityMetadataBuilder.computeInverseProperties (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:698:34)
+    at /home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:84:58
+    at Array.forEach (<anonymous>)
+    at EntityMetadataBuilder.build (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:84:25)
+    at ConnectionMetadataBuilder.buildEntityMetadatas (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/connection/ConnectionMetadataBuilder.js:66:150)
+    at async DataSource.buildMetadatas (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/data-source/DataSource.js:439:33)
+    at async DataSource.initialize (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/data-source/DataSource.js:130:13)
+    at async runServer (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/src/index.ts:12:5) Unable to start the server!
+[2023-05-22T10:10:42.327] [ERROR] app - TypeORMError: Entity metadata for Email#mobile_customer_email was not found. Check if you specified a correct entity object and if it's connected in the connection options.
+    at /home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:705:23
+    at Array.forEach (<anonymous>)
+    at EntityMetadataBuilder.computeInverseProperties (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:698:34)
+    at /home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:84:58
+    at Array.forEach (<anonymous>)
+    at EntityMetadataBuilder.build (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:84:25)
+    at ConnectionMetadataBuilder.buildEntityMetadatas (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/connection/ConnectionMetadataBuilder.js:66:150)
+    at async DataSource.buildMetadatas (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/data-source/DataSource.js:439:33)
+    at async DataSource.initialize (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/data-source/DataSource.js:130:13)
+    at async runServer (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/src/index.ts:12:5) Unable to start the server!
+[2023-05-22T10:10:48.640] [ERROR] app - TypeORMError: Entity metadata for Email#mobile_customer_email was not found. Check if you specified a correct entity object and if it's connected in the connection options.
+    at /home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:705:23
+    at Array.forEach (<anonymous>)
+    at EntityMetadataBuilder.computeInverseProperties (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:698:34)
+    at /home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:84:58
+    at Array.forEach (<anonymous>)
+    at EntityMetadataBuilder.build (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:84:25)
+    at ConnectionMetadataBuilder.buildEntityMetadatas (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/connection/ConnectionMetadataBuilder.js:66:150)
+    at async DataSource.buildMetadatas (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/data-source/DataSource.js:439:33)
+    at async DataSource.initialize (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/data-source/DataSource.js:130:13)
+    at async runServer (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/src/index.ts:12:5) Unable to start the server!
+[2023-05-22T10:11:49.767] [ERROR] app - TypeORMError: Entity metadata for Email#mobile_customer_email was not found. Check if you specified a correct entity object and if it's connected in the connection options.
+    at /home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:705:23
+    at Array.forEach (<anonymous>)
+    at EntityMetadataBuilder.computeInverseProperties (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:698:34)
+    at /home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:84:58
+    at Array.forEach (<anonymous>)
+    at EntityMetadataBuilder.build (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/metadata-builder/EntityMetadataBuilder.js:84:25)
+    at ConnectionMetadataBuilder.buildEntityMetadatas (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/connection/ConnectionMetadataBuilder.js:66:150)
+    at async DataSource.buildMetadatas (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/data-source/DataSource.js:439:33)
+    at async DataSource.initialize (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/node_modules/typeorm/data-source/DataSource.js:130:13)
+    at async runServer (/home/laptop-pr-29/Documents/tyescript-poc/typescript-sample/src/index.ts:12:5) Unable to start the server!
+[2023-05-22T10:12:10.642] [INFO] app - Database connected
+[2023-05-22T10:12:10.648] [INFO] app - Redis db connection established!
+[2023-05-22T10:12:10.660] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T10:12:10.660] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T10:12:30.689] [INFO] app - Database connected
+[2023-05-22T10:12:30.697] [INFO] app - Redis db connection established!
+[2023-05-22T10:12:30.708] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T10:12:30.708] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T10:14:08.614] [INFO] app - Database connected
+[2023-05-22T10:14:08.621] [INFO] app - Redis db connection established!
+[2023-05-22T10:14:08.632] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T10:14:08.632] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T10:14:42.705] [INFO] app - Database connected
+[2023-05-22T10:14:42.712] [INFO] app - Redis db connection established!
+[2023-05-22T10:14:42.724] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T10:14:42.724] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T10:15:26.999] [INFO] app - Database connected
+[2023-05-22T10:15:27.013] [INFO] app - Redis db connection established!
+[2023-05-22T10:15:27.030] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T10:15:27.031] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T10:15:45.595] [INFO] app - Database connected
+[2023-05-22T10:15:45.600] [INFO] app - Redis db connection established!
+[2023-05-22T10:15:45.615] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T10:15:45.615] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T10:15:54.565] [INFO] app - Database connected
+[2023-05-22T10:15:54.572] [INFO] app - Redis db connection established!
+[2023-05-22T10:15:54.583] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T10:15:54.584] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T10:16:21.747] [INFO] app - Database connected
+[2023-05-22T10:16:21.752] [INFO] app - Redis db connection established!
+[2023-05-22T10:16:21.765] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T10:16:21.765] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T10:17:33.329] [INFO] app - Database connected
+[2023-05-22T10:17:33.333] [INFO] app - Redis db connection established!
+[2023-05-22T10:17:33.344] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T10:17:33.344] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T10:18:01.953] [INFO] app - Database connected
+[2023-05-22T10:18:01.958] [INFO] app - Redis db connection established!
+[2023-05-22T10:18:01.968] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T10:18:01.969] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T10:20:30.064] [INFO] app - Database connected
+[2023-05-22T10:20:30.069] [INFO] app - Redis db connection established!
+[2023-05-22T10:20:30.083] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T10:20:30.083] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T10:20:47.105] [INFO] app - Database connected
+[2023-05-22T10:20:47.109] [INFO] app - Redis db connection established!
+[2023-05-22T10:20:47.119] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T10:20:47.120] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T10:21:32.778] [INFO] app - Database connected
+[2023-05-22T10:21:32.782] [INFO] app - Redis db connection established!
+[2023-05-22T10:21:32.794] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T10:21:32.794] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T10:22:31.312] [INFO] app - Database connected
+[2023-05-22T10:22:31.316] [INFO] app - Redis db connection established!
+[2023-05-22T10:22:31.328] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T10:22:31.328] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T10:22:39.867] [INFO] app - Database connected
+[2023-05-22T10:22:39.872] [INFO] app - Redis db connection established!
+[2023-05-22T10:22:39.882] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T10:22:39.883] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T10:23:38.145] [INFO] app - Database connected
+[2023-05-22T10:23:38.149] [INFO] app - Redis db connection established!
+[2023-05-22T10:23:38.159] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T10:23:38.160] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T10:25:10.769] [INFO] app - Database connected
+[2023-05-22T10:25:10.776] [INFO] app - Redis db connection established!
+[2023-05-22T10:25:10.790] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T10:25:10.791] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T10:26:27.065] [INFO] app - Database connected
+[2023-05-22T10:26:27.070] [INFO] app - Redis db connection established!
+[2023-05-22T10:26:27.081] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T10:26:27.081] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T10:26:30.311] [INFO] app - Database connected
+[2023-05-22T10:26:30.315] [INFO] app - Redis db connection established!
+[2023-05-22T10:26:30.326] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T10:26:30.327] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T10:28:22.119] [INFO] app - Database connected
+[2023-05-22T10:28:22.124] [INFO] app - Redis db connection established!
+[2023-05-22T10:28:22.136] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T10:28:22.136] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T10:28:25.038] [INFO] app - Database connected
+[2023-05-22T10:28:25.042] [INFO] app - Redis db connection established!
+[2023-05-22T10:28:25.053] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T10:28:25.053] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T10:28:56.508] [INFO] app - Database connected
+[2023-05-22T10:28:56.514] [INFO] app - Redis db connection established!
+[2023-05-22T10:28:56.525] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T10:28:56.526] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T10:29:38.532] [INFO] app - Database connected
+[2023-05-22T10:29:38.537] [INFO] app - Redis db connection established!
+[2023-05-22T10:29:38.548] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T10:29:38.548] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T10:29:45.080] [INFO] app - Database connected
+[2023-05-22T10:29:45.085] [INFO] app - Redis db connection established!
+[2023-05-22T10:29:45.096] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T10:29:45.097] [INFO] app - Press CTRL-C to stop
+
+[2023-05-22T10:29:51.706] [INFO] app - Database connected
+[2023-05-22T10:29:51.710] [INFO] app - Redis db connection established!
+[2023-05-22T10:29:51.720] [INFO] app - [32m✓[39m App is running at http://localhost:9000 in localhost mode
+[2023-05-22T10:29:51.720] [INFO] app - Press CTRL-C to stop
+

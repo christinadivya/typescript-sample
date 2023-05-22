@@ -1,4 +1,4 @@
-# Livesust-auth
+# Typescript-auth
 
 NodeJS typescript Webservices.
 
